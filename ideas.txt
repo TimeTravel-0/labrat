@@ -1,0 +1,26 @@
+a) admin/overview: 
+  1. calendar view per location,equipment (busy/free)
+  * for selected time window get location/equipmentbooking table inner joined with other relevant tables
+  * display in table (month or year view)
+
+  2. consumables overview
+  * get table of consumables
+  * display their current stored amount vs. minimum "reorder" count (sorted low to high depending on ratio between these)
+
+  3. equipment overview over time
+  * get equipment table
+  * for each equipment in a row, show busy/free
+
+  forms that input data and what they actually perform:
+  1. create/delete/edit location
+  2. create/delete/edit users
+  3. create/delete/edit equipment
+  4. create/delete/edit projects
+  5. create/delete/edit consumables
+  
+b) user side:
+
+  1. book a place
+  2. book eqipment
+  3. book consumables
+
