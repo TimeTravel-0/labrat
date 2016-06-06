@@ -17,9 +17,27 @@ function post($varname)
     }
 }
 
+function session($varname)
+{
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    if(array_key_exists($varname,$_SESSION))
+    {
+        return uesc($_SESSION[$varname]);
+    }
+    else
+    {
+        return "";
+    }
+}
+
 function user_session_handling()
 {
-    session_start();
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    
     $action = post("action");
     $username = post("username");
     $password = post("password");

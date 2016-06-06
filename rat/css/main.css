@@ -1,0 +1,47 @@
+.loginlogout
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+    padding:5px;
+    background-color:grey;
+    border-color:black;
+    border-width:1px;
+    border-radius:0 0 0 10px;
+}
+
+.loginlogout input
+{
+    width:100px;
+    float:left;
+    border-radius:4px;
+    padding:0 2px 0 2px;
+    margin:2px;
+}
+
+.langselector
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    padding:5px;
+    background-color:grey;
+    border-color:black;
+    border-width:1px;
+    border-radius:0 0 10px 0;
+}
+
+
+.langselector select
+{
+    width:100px;
+    float:left;
+    border-radius:4px;
+    padding:0 2px 0 2px;
+    margin:2px;
+}
+
+body
+{
+    padding-top:40px;
+}

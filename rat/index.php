@@ -5,25 +5,38 @@ ini_set('display_errors', 'On');
 include("config.php");
 include("libdb.php");
 include("libuser.php");
+include("liblang.php");
+include("libguielements.php");
 
 user_session_handling();
-
-// depending on the http get request parameter, we will do different stuff...
-
-print("<pre>hi there\n");
-
-
-if($_SESSION['user_logged_in'])
-{
-    print("logged in");
-}
-else
-{
-    print("not logged in");
-}
+lang_handling();
 
 
 ?>
+<html>
+<head>
+    <title><?php print(lang("%productname%")); ?></title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
 
-<form method="POST"><input type="hidden" name="action" value="login"><input name="username" value="a"><input name="password" value="b"><input type="submit" name="action" value="login"></form>
-<form method="POST"><input type="hidden" name="action" value="logout"><input type="submit" value="logout"></form>
+<?php
+// depending on the http get request parameter, we will do different stuff...
+
+print("<pre>");
+print(lang("<h1>%productname%</h1>"));
+print(lang("%welcome%!"));
+print(gui_loginlogout());
+print(gui_langselector());
+
+
+#lang_set("de");
+print(lang("language selected: %this_lang%, and dont forget to %logout% or %sowas%"));
+
+?>
+
+
+</body>
+</html>
+
