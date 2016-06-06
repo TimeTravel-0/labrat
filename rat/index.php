@@ -13,6 +13,7 @@ lang_handling();
 
 
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
     <title><?php print(lang("%productname%")); ?></title>
@@ -20,23 +21,22 @@ lang_handling();
     <link rel="stylesheet" href="css/print.css">
 </head>
 <body>
+    
+
 
 <?php
 // depending on the http get request parameter, we will do different stuff...
 
-print("<pre>");
 print(lang("<h1>%productname%</h1>"));
-print(lang("%welcome%!"));
+print(lang("<p>%welcome%!</p>"));
 print(gui_loginlogout());
 print(gui_langselector());
 
 
 #lang_set("de");
-print(lang("language selected: %this_lang%, and dont forget to %logout% or %sowas%"));
+print(lang("<p>language selected: %this_lang%, and dont forget to %logout% or %sowas%</p>"));
 
 ?>
-
-
 </body>
 </html>
 

@@ -8,6 +8,7 @@
     border-color:black;
     border-width:1px;
     border-radius:0 0 0 10px;
+    margin-top:-15px;
 }
 
 .loginlogout input
@@ -29,6 +30,7 @@
     border-color:black;
     border-width:1px;
     border-radius:0 0 10px 0;
+    margin-top:-15px;
 }
 
 
